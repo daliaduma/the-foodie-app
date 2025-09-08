@@ -18,7 +18,7 @@ export default function MainHeader() {
         <nav className={classes.nav}>
           <ul>
             <li>
-              <NavLink href={"/meals"}>Browse Link</NavLink>
+              <NavLink href={"/meals"}>Meals Page</NavLink>
             </li>
             <li>
               <NavLink href={"/community"}>Foodies Community</NavLink>
