@@ -3,8 +3,18 @@ import Image from "next/image";
 import { getMeal } from "@/lib/meals";
 import { notFound } from "next/navigation";
 
-export default function MealSlugPage({ params }) {
-  const meal = getMeal(params.mealSlug);
+export async function generateMetadata({ params }) {
+  const { mealSlug } = await params;
+  const meal = await getMeal(mealSlug);
+  return {
+    title: meal.title,
+    description: meal.summary,
+  };
+}
+
+export default async function MealSlugPage({ params }) {
+  const { mealSlug } = await params;
+  const meal = getMeal(mealSlug);
 
   if (!meal) {
     notFound();
