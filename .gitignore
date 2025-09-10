@@ -35,3 +35,6 @@ typings/
 
 # Yarn Integrity file
 .yarn-integrity
+
+# Sectrets
+.env.*
