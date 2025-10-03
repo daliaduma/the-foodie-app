@@ -32,7 +32,7 @@ export default async function MealSlugPage({ params }) {
       <header className={classes.header}>
         <div className={classes.image}>
           <Image
-            src={`https://daliaduma-nextjs-demo-users-image.s3.amazonaws.com/${meal.image}`}
+            src={`https://daliaduma-nextjs-demo-users-image.s3.eu-north-1.amazonaws.com/${meal.image}`}
             alt={meal.title}
             fill
           />

@@ -37,4 +37,5 @@ typings/
 .yarn-integrity
 
 # Sectrets
+.env
 .env.*

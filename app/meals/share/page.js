@@ -7,6 +7,7 @@ import { useActionState } from "react";
 
 export default function ShareMealPage() {
   const [state, formAction] = useActionState(shareMeal, { message: null });
+
   return (
     <>
       <header className={classes.header}>
@@ -45,7 +46,7 @@ export default function ShareMealPage() {
             ></textarea>
           </p>
           <ImagePicker label={"Your image"} name="image" />
-          {state.message && <p>{state.message}</p>}
+          {state?.message && <p>{state.message}</p>}
           <p className={classes.actions}>
             <MealFormSubmit />
           </p>
